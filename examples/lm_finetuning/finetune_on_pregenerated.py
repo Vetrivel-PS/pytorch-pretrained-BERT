@@ -9,6 +9,7 @@ from collections import namedtuple
 from tempfile import TemporaryDirectory
 import os
 from torch.utils.data import DataLoader, Dataset, RandomSampler
+from pytorch_pretrained_bert.file_utils import WEIGHTS_NAME, CONFIG_NAME
 from torch.utils.data.distributed import DistributedSampler
 from tqdm import tqdm
 
