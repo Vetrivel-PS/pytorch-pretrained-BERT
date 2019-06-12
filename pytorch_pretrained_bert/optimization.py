@@ -58,7 +58,7 @@ class _LRSchedule(ABC):
         """
         if self.t_total < 0:
             return 1.
-        progress = float(step) / self.t_total
+        progress = float(step) / (self.t_total + 1)
         ret = self.get_lr_(progress)
         # warning for exceeding t_total (only active with warmup_linear
         if not nowarn and self.warn_t_total and progress > 1. and progress > self.warned_for_t_total_at_progress:
